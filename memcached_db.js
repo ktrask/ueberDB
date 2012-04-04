@@ -36,7 +36,7 @@ exports.database = function(settings)
 
 exports.database.prototype.init = function(callback)
 {
-  this.db = new Memcached("127.0.0.1:11280");
+  this.db = new Memcached("127.0.0.1:11211");
   //this.db.on('load', function(err)
   //{
     callback();
@@ -84,7 +84,7 @@ exports.database.prototype.doBulk = function (bulk, callback)
   {
     if(bulk[i].type == "set")
     {
-      set(bulk[i].key, bulk[i].value, callback);
+    //  set(bulk[i].key, bulk[i].value, callback);
       //this.db.set(bulk[i].key, bulk[i].value, callback);
     }
     else if(bulk[i].type == "remove")

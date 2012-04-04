@@ -1,3 +1,7 @@
+#Changes
+
+I have added a memcacked-backend for ueberDB, but its actually experimentel, so don't use ist, if you don't know what you're doing.
+
 #About
 
 ueberDB is a abstraction layer for databases. It turns every database into a simple key value store, at the moment we only support mysql and sqlite. ueberDB uses a smart cache and buffer algorithm to make databases faster. Reads are cached and writes are done in a bulk. The bulk writing reduces the overhead of a database transaction.
